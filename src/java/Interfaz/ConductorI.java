@@ -1,7 +1,7 @@
 
 package Interfaz;
 
-import Modelo.Conductor;
+
 import java.util.List;
 
 public interface ConductorI {
@@ -9,5 +9,9 @@ public interface ConductorI {
     public int agregar(String _idConductor,String _nombre,String _apePat,String _apeMat,String _dni,
                        String _tipoLicencia,String _n_licencia,String _estado,String _tipoConductor,
                        String _nacionalidad,long _pasaporte);
-  
+    public int actualizar(String _idConductor,String _nombre,String _apePat,String _apeMat,String _dni,
+                       String _tipoLicencia,String _n_licencia,String _estado,String _tipoConductor,
+                       String _nacionalidad,long _pasaporte);
+    public List listarId(String _idConductor);
+    public int eliminar(String _idConductor);
 }

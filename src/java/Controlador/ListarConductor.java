@@ -47,8 +47,8 @@ public class ListarConductor extends HttpServlet {
                            "<td>"+c.getNacionalidad()+"</td>"+
                            "<td>"+c.getPasaporte()+"</td>"+
                            "<td>"+                        
-                               "<a class='edit opcion' onclick='Edit()'><i class='fa fa-edit'></i></a>"
-                               +"<a class='delete opcion' onclick='Delete()'><i class='fas fa-trash-alt'></i></a>"  
+                               "<a  class='edit opcion' onclick='Edit("+c.getIdConductor()+")'><i class='fa fa-edit'></i></a>"
+                               +"<a class='delete opcion' onclick='Delete("+c.getIdConductor()+")'><i class='fas fa-trash-alt'></i></a>"  
                            +"</td>"+
                             "</tr>");     
                 }  

@@ -9,22 +9,61 @@
     transform: scale(0);    
     top:0;
     left:0;
-    z-index: 100;
-    transition: all 1s;
+    z-index: 2000;
+    transition: all .3s;
 }
 .actualizar{
    transform-origin:82.5% 70%; 
 }
+.actualizar::after{
+   content: 'X';
+   padding:15px 19px;
+   color:#fff;
+   border-radius: 50%;
+   background: red;
+   position: absolute;
+   top:50px;
+   font-size: 20px;
+   font-weight: bold;
+   right: 100px;
+   cursor:pointer;
+}
+.actualizar::before{
+   content: 'Actualizar Información';
+   color:#fff;
+   position: absolute;
+   top:150px;
+   left:200px;
+   font-size:2em;
+   font-weight: bold;
+   
+}
 .delete{
-   top:62%;
-   left:75.5%;
+   top:65%;
+   left:79.5%;
    transform-origin:center;
-   width:250px;
-   height:100px;
+   width:150px;
+   height:60px;
+   display:flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+.coment{
+  font-size:.8em;
+    color:#fff;
+}
+.chico{
+    padding:5px 10px;
+}
+.chico.si{
+    background: red;
+}
+.chico.no{
+    background: lime;
 }
 .modal-content{
     background: #fff;
-    width: 65vw;
+    width: 70vw;
     height:40vh;
     padding: 50px;
     border-radius:5px;

@@ -70,52 +70,51 @@
          </div>
          <div class="container-table">
             <table class="table">
-                <div class="table-header">
-                            <p>Lista Conductores</p>
-                            <a  href="#" onclick="refrescar();">Refrescar<i class="fas fa-sync-alt"></i></a>
-                </div>
-                <thead class="thead">      
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Dni</th>
-                        <th>Licencia</th>
-                        <th>Estado</th>
-                        <th>Tipo</th>
-                        <th>País.o</th>
-                        <th>Pasaporte</th>
-                        <th></th>
-                    </tr>
-                </thead>
-               
+                   <div class="table-header">
+                                <p>Lista Conductores</p>
+                                <a  href="#" onclick="refrescar();">Refrescar<i class="fas fa-sync-alt"></i></a>
+                    </div>
+                    <thead class="thead ">
+                       
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Dni</th>
+                            <th>Licencia</th>
+                            <th>Estado</th>
+                            <th>Tipo</th>
+                            <th>País.o</th>
+                            <th>Pasaporte</th>
+                            <th></th>
+                        </tr>
+                    </thead>
                 <tbody class="tbody" id="listarConductores">
                              
                 </tbody>
             </table>
 
        </div> 
-          <div class="modal actualizar" id="modal-actualizar" >   
+       <div class="modal actualizar" id="modal-actualizar" >   
                <div class="modal-content">
                    <div class="container-modal">
-                        <form class="form-contenido">
-                                
+                        <form class="form-contenido">        
                                 <div class="parejas">                      
-                                    <input type="text" id="txtNombre" class="form-control">
+                                    <input type="text" id="txtNombreModal" class="form-control">
                                     <label class="parejas-label">Nombre del chofer</label>
                                 </div>  
                                 <div class="parejas">                      
-                                    <input type="text"  id="txtPat" class="form-control">
+                                    <input type="text"  id="txtPatModal" class="form-control">
                                     <label class="parejas-label">Apellido Paterno del chofer</label>
                                 </div>      
                                 <div class="parejas">                      
-                                    <input type="text"  id="txtMat" class="form-control">
+                                    <input type="text"  id="txtMatModal" class="form-control">
                                     <label class="parejas-label">Apellido Materno del chofer</label>
                                 </div> 
                                <div class="parejas">                      
-                                    <input type="text"  id="txtDni" class="form-control">
+                                    <input type="text"  id="txtDniModal" class="form-control">
                                     <label class="parejas-label">Dni del chofer</label>
                                 </div>                   
-                                    <select  id="txtLicencia" class="form-control">
+                                <select  id="txtLicenciaTipoModal" class="form-control">
                                        <option>A-II</option>
                                        <option>A-IIa</option>
                                        <option>A-I</option>
@@ -127,29 +126,29 @@
                                        <option>B-I</option>
                                        <option>B-IIb</option>
                                        <option>B-IIC</option>
-                                   </select> 
+                                 </select> 
                                  <div class="parejas">                      
-                                     <input type="text"  id="txtNuLicencia" class="form-control">              
+                                     <input type="text"  id="txtNuLicenciaModal" class="form-control">              
                                     <label class="parejas-label">Numero de Licencia del chofer</label>
                                 </div>              
-                                <select  id="txtEstados" class="form-control">
+                                <select  id="txtEstadosModal" class="form-control">
                                     <option>Inactivo</option>
                                     <option>Activo</option>                       
                                 </select> 
-                                 <select  id="txtTipo" class="form-control">
+                                 <select  id="txtTipoModal" class="form-control">
                                     <option>Civil</option>
                                     <option>Militar</option>                       
                                 </select>  
                             <div class="parejas">                      
-                                     <input name="txtNacionalidad" id="txtNacionalidad"  class="form-control">
+                                     <input id="txtNacionalidadModal"  class="form-control">
                                     <label class="parejas-label">Nacionalidad del chofer</label>
                              </div>  
                             <div class="parejas">                      
-                                      <input  name="txtPasaporte" id="txtPasaporte" class="form-control">
+                                      <input id="txtPasaporteModal" class="form-control">
                                     <label class="parejas-label">Pasaporte del chofer</label>
                             </div>    
                             <div class="parejas">                      
-                                    <input type="hidden"  id="txtId" class="form-control">                                   
+                                    <input type="hidden"  id="txtIdModal" class="form-control">                                   
                             </div> 
                                 <button href="#" onclick="Exit();" type="button" class="btn btn-cerrar">Cancelar<i class="fas fa-times-circle icon"></i></button>
                                 <button href="#" onclick="Actualizar();" type="button" class="btn btn-registrar">Actualizar<i class="fas fa-save icon"></i></button>               
@@ -158,10 +157,15 @@
                </div>
               
             </div>
-          <div class="modal delete" id="modal-eliminar" >   
-                   <button href="#" onclick="Exit();" type="button" >Cancelar<i class="fas fa-times-circle icon"></i></button>
-                   <button href="#" onclick="Actualizar();" type="button" >Actualizar<i class="fas fa-save icon"></i></button>                
-            </div>
+          <!--<div class="modal delete" id="modal-eliminar" > 
+              <div>
+                   <p class="coment">¿Esta Seguro?</p>
+              </div>
+              <div>
+                   <button href="#" onclick="Exit();" type="button" class="btn chico no" >No</button>
+                   <button href="#" onclick="eliminar();" type="button" class="btn chico si" >Si</button>              
+              </div>     
+           </div>-->
        </div>
       </div>
     </body>
