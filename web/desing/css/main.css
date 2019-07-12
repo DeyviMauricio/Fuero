@@ -1,0 +1,34 @@
+@import "menu_vertical.css";
+@import "header_styles.css";
+@import "styles.css";
+@import "fontawesome.css";
+@import "div-content.css";
+@import "modal.css";
+@font-face{
+   src:url(https://fonts.googleapis.com/css?family=Roboto);
+}
+:root{
+    --c-main:#0d2c44;
+    --c-secondary:#ffb400;
+    --c-com:#494949;
+    --c-darkwhite:#e9e9e9;   
+    --c-turk:#1a95d5;
+    --darkgris:#424242;
+    --c-white:#fff;
+    /*Colores transparentes*/
+    --c-main-trans:rgba(13, 44, 68,.8);
+    --c-white-trans:rgba(233, 233, 233,.9);
+    --c-main-trans:rgba(13, 44, 68,.7);
+    --darkgris-trans:rgba(66, 66, 66,.9);
+    --c-turk-trans:rgba(26, 149, 213.4);
+}
+body{
+    background-image:url(../img/fuero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;   
+}
+
+
+
+

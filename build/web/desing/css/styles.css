@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --c-trans:rgba(233, 233, 233,.9);
+}
+.body{
+    height: 100vh;
+    width: 80vw;  
+    margin:0 auto;
+    padding-top:60px;
+}
+.content{
+    margin:0 auto;   
+    background:var(--c-trans);
+   /* background-image:url(http://adf4e15ad6278c657382-42982e950c970977129372720358a2cc.r4.cf1.rackcdn.com/LoSentimos.jpg);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
