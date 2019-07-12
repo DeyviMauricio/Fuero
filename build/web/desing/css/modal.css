@@ -12,9 +12,6 @@
     z-index: 2000;
     transition: all .3s;
 }
-.actualizar{
-   transform-origin:82.5% 70%; 
-}
 .actualizar::after{
    content: 'X';
    padding:15px 19px;
@@ -35,8 +32,7 @@
    top:150px;
    left:200px;
    font-size:2em;
-   font-weight: bold;
-   
+   font-weight: bold;   
 }
 .delete{
    top:65%;

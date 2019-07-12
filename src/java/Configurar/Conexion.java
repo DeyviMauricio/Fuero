@@ -10,7 +10,7 @@ public class Conexion {
     public Conexion(){
         try{
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-           conn =DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=fuero","sa","alumno");
+           conn =DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=fuero","sa","12345678");
         }catch(ClassNotFoundException | SQLException e){
                 System.out.println("ERROR:"+e);
 

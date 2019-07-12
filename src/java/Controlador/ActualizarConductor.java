@@ -44,7 +44,7 @@ public class ActualizarConductor extends HttpServlet {
             String estados = request.getParameter("txtEstados");
             String tipo_conductor = request.getParameter("txtTipo");
             String nacionalidad = request.getParameter("txtNacionalidad");
-            long pasaporte =Integer.parseInt(request.getParameter("txtPasaporte"));
+            String pasaporte =request.getParameter("txtPasaporte");
             
             ConductorDAO dao = new ConductorDAO();
             int records = dao.actualizar(idConductor, nombre, apePat, apeMat, dni, tipoLicencia, n_licencia, estados, tipo_conductor, nacionalidad, pasaporte);

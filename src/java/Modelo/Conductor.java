@@ -14,12 +14,12 @@ public class Conductor {
     private String estado;
     private String tipo_conductor;
     private String nacionalidad;
-    private long pasaporte;
+    private String pasaporte;
 
     public Conductor() {
     }
 
-    public Conductor(String idConductor, String nombre, String apePat, String apeMat, String dni, String tipoLicencia, String  n_licencia, String estado, String tipo_conductor, String nacionalidad, long pasaporte) {
+    public Conductor(String idConductor, String nombre, String apePat, String apeMat, String dni, String tipoLicencia, String  n_licencia, String estado, String tipo_conductor, String nacionalidad, String pasaporte) {
         this.idConductor = idConductor;
         this.nombre = nombre;
         this.apePat = apePat;
@@ -113,11 +113,11 @@ public class Conductor {
         this.nacionalidad = nacionalidad;
     }
 
-    public long getPasaporte() {
+    public String getPasaporte() {
         return pasaporte;
     }
 
-    public void setPasaporte(long pasaporte) {
+    public void setPasaporte(String pasaporte) {
         this.pasaporte = pasaporte;
     }
     

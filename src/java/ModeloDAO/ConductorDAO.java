@@ -37,7 +37,7 @@ public class ConductorDAO implements ConductorI {
                 c.setEstado(rs.getString(8));
                 c.setTipo_conductor(rs.getString(9));
                 c.setNacionalidad(rs.getString(10));
-                c.setPasaporte(rs.getLong(11));
+                c.setPasaporte(rs.getString(11));
                 list.add(c);
             }
         } catch (SQLException e) {
@@ -48,7 +48,7 @@ public class ConductorDAO implements ConductorI {
     @Override
     public int agregar(String _idConductor, String _nombre, String _apePat, String _apeMat, 
             String _dni, String _tipoLicencia, String _n_licencia,
-            String _estado, String _tipoConductor, String _nacionalidad, long _pasaporte) {
+            String _estado, String _tipoConductor, String _nacionalidad, String _pasaporte) {
         try {
             cn=conexion.getConnection();
             String query="insert into conductor values(?,?,?,?,?,?,?,?,?,?,?);";
@@ -63,7 +63,7 @@ public class ConductorDAO implements ConductorI {
             ps.setString(8,_estado);
             ps.setString(9,_tipoConductor);
             ps.setString(10,_nacionalidad);
-            ps.setLong(11,_pasaporte);
+            ps.setString(11,_pasaporte);
             int affects = ps.executeUpdate();
             return affects;
         } catch (SQLException e) {
@@ -91,7 +91,7 @@ public class ConductorDAO implements ConductorI {
                 c.setEstado(rs.getString(8));
                 c.setTipo_conductor(rs.getString(9));
                 c.setNacionalidad(rs.getString(10));
-                c.setPasaporte(rs.getLong(11));
+                c.setPasaporte(rs.getString(11));
                 list.add(c);
             }
         } catch (SQLException e) {
@@ -114,7 +114,7 @@ public class ConductorDAO implements ConductorI {
     }
 
     @Override
-    public int actualizar(String _idConductor, String _nombre, String _apePat, String _apeMat, String _dni, String _tipoLicencia, String _n_licencia, String _estado, String _tipoConductor, String _nacionalidad, long _pasaporte) {
+    public int actualizar(String _idConductor, String _nombre, String _apePat, String _apeMat, String _dni, String _tipoLicencia, String _n_licencia, String _estado, String _tipoConductor, String _nacionalidad, String _pasaporte) {
         try {
             cn=conexion.getConnection();
             String query="update conductor set nombre=?,apell_pat=?,apell_mat=?,DNI=?,tipo_licencia=?,numero_bevete=?,estado_conduc=?,tipo_conductor=?,nacionalidad=?,pasaporte=? where id_conductor=?;";
@@ -128,7 +128,7 @@ public class ConductorDAO implements ConductorI {
             ps.setString(7,_estado);
             ps.setString(8,_tipoConductor);
             ps.setString(9,_nacionalidad);
-            ps.setLong(10,_pasaporte);
+            ps.setString(10,_pasaporte);
             ps.setString(11,_idConductor);
             int affects = ps.executeUpdate();
             return affects;
